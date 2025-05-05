@@ -67,7 +67,7 @@ void A_output(struct msg message)
   /* If there is space in the send window, proceed to create and send the packet */
   if (buffered_count < WINDOWSIZE)
   {
-    if (TRACE > 1) printf("----A: New message arrives, send window is not full, send new message to layer3!\n");
+    if (TRACE > 1) printf("----A: New message arrives, send window is not full, send new messge to layer3!\n");
 
     sendpkt.seqnum = A_nextseqnum;
     sendpkt.acknum = NOTINUSE; /* No need to send an ACK number from A */
@@ -159,7 +159,7 @@ void A_timerinterrupt(void)
     /* Resend the base packet */
   if (TRACE > 0) {
     printf("----A: time out,resend packets!\n");
-    printf("----A: resending packet %d\n", base_packet.seqnum);
+    printf("---A: resending packet %d\n", base_packet.seqnum);
   }
 
     /* resend the packet at the base of the window */
