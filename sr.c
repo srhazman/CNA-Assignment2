@@ -159,7 +159,7 @@ void A_timerinterrupt(void)
     /* Resend the base packet */
   if (TRACE > 0) {
     printf("----A: time out,resend packets!\n");
-    printf("---A: resending packet %d\n", base_packet.seqnum);
+    printf("----A: resending packet %d\n", base_packet.seqnum);
   }
 
     /* resend the packet at the base of the window */
